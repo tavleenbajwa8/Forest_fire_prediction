@@ -2,15 +2,17 @@ import pickle, bz2
 from flask import Flask, request, render_template
 import numpy as np
 import pandas as pd
-from app_logger import log
+from app_logger import *
 import warnings
+import logging
+from logging import Formatter, FileHandler
 warnings.filterwarnings("ignore")
 
 
 app = Flask(__name__)
 
 # Import Classification and Regression model file
-C_pickle = bz2.BZ2File('Classification.pkl', 'rb')
+C_pickle = bz2.BZ2File('saved_dt_model.pkl', 'rb')
 model_C = pickle.load(C_pickle)
 
 
