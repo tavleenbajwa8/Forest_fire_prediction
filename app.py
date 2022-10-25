@@ -1,19 +1,22 @@
-import pickle, bz2
+import pickle
 from flask import Flask, request, render_template
 import numpy as np
 import pandas as pd
-from app_logger import *
+from app_logger import log
 import warnings
-import logging
-from logging import Formatter, FileHandler
 warnings.filterwarnings("ignore")
 
 
 app = Flask(__name__)
 
 # Import Classification and Regression model file
-C_pickle = bz2.BZ2File('saved_dt_model.pkl', 'rb')
-model_C = pickle.load(C_pickle)
+
+model_C = pd.read_pickle(r'saved_dt_model1.pkl')
+
+# with open pickle.load('saved_dt_model.pkl', 'rb') as model_C:
+#     model_C = pickle.load(C_pickle)
+# C_pickle = bz2.BZ2File('saved_dt_model.bz2', 'rb')
+# model_C = pickle.load(C_pickle)
 
 
 
@@ -54,3 +57,9 @@ def predictC():
         except Exception as e:
             log.error('Input error, check input', e)
         return render_template('index.html', prediction_text1="Check the Input again!!!")
+
+
+# Run APP in Debug mode
+
+if __name__ == "__main__":
+    app.run(debug=False, port= 5000)
