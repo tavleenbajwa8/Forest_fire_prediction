@@ -25,5 +25,4 @@ urllib3==1.25.10
 Werkzeug==1.0.1
 pandas==1.5.1
 zipp==3.8.1
-importlib-metadata==4.12.0
 
