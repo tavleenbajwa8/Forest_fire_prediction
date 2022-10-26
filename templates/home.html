@@ -31,28 +31,15 @@
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
-<body>
- <div class="login">
-	<h1>FWI Prediction</h1>
-
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predictR')}}" method="post">
-      <input type="text" name="Temperature" placeholder="Temperature" required="required" /><br>
-    	<input type="text" name="RH" placeholder="RH" required="required" /><br>
-        <input type="text" name="Ws" placeholder="Ws" required="required" /><br>
-        <input type="text" name="Rain" placeholder="Rain" required="required" /><br>
-        <input type="text" name="FFMC" placeholder="FFMC" required="required" /><br>
-
-
-
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
-   <br>
-   <br>
-
 
  </div>
  {{prediction_text}}
 
 </body>
 </html>
+
+
+
+
+
+
