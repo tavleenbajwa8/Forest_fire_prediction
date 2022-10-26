@@ -20,14 +20,14 @@
             <h1>ALGERIAN FOREST FIRE PREDICTION</h1>
             <img src="{{ url_for('static', filename = 'images/dots.png')}}" alt="">
         </div>
-        <h2>Project by Ashishkumar Rana
+        <h2>Project by Tavleen Bajwa
         	<div class="contact-details" >
-				<a href="https://github.com/ashishrana1501" rel="noopener noreferrer"
+				<a href="https://github.com/tavleenbajwa8" rel="noopener noreferrer"
 					target="_blank"
 				>
 					<img src="{{ url_for('static',filename='images/Github.png') }}" />
 				</a>
-                <a href="https://www.linkedin.com/in/ashishkumar-rana/" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/in/tavleen-bajwa-04aa88198/" rel="noopener noreferrer"
                    target="_blank"
 				>
 					<img src="{{ url_for('static',filename='images/linkedin.png') }}" />
@@ -65,38 +65,6 @@
                           {{prediction_text1}}
             </form>
         </div>
-        <div class="container">
-            <h3>Fire Weather Index Prediction (Regression Model) </h3>
-            <form action="{{ url_for('predictR')}}" id="Reg_form" class="booking-form" method="POST">
-                <div class="form-group">
-                    <div>
-                        <label for="Temperature1">Temperature</label>
-                        <input type="text" id="Temperature1" name="Temperature" placeholder="Temperature" />
-                    </div>
-                    <div>
-                        <label for="Wind_speed">Windspeed</label>
-                        <input type="text" id="Wind_speed" name="Wind_speed" placeholder="Wind speed" />
-                    </div>
-                    <div>
-                        <label for="FFMC1">Fuel Moisture Code</label>
-                        <input type="text" id="FFMC1" name="FFMC" placeholder="FFMC" />
-                    </div>
-                    <div>
-                        <label for="DMC1">Duff Moisture Code</label>
-                        <input type="text" id="DMC1" name="DMC1" placeholder="DMC" />
-                    </div>
-                    <div>
-                        <label for="ISI1">Initial Spread Index</label>
-                        <input type="text" id="ISI1" name="ISI1" placeholder="ISI" />
-                    </div>
-                    <div class="form-submit">
-                        <input type="submit" id="submitR" class="submit" value="Predict" />
-                    </div>
-                </div>
-                          {{prediction_text2}}
-            </form>
-        </div>
-
     </div>
 </body>
 </html>
