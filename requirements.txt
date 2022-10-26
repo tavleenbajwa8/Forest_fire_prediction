@@ -20,8 +20,4 @@ sklearn==0.0
 threadpoolctl==2.1.0
 urllib3==1.25.10
 Werkzeug==1.0.1
-<<<<<<< HEAD
 zipp==3.8.1
-
-=======
->>>>>>> cf78c7ad29afd8d6206ced304a18777cdb4034fc
