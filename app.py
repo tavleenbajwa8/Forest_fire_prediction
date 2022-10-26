@@ -12,7 +12,9 @@ app = Flask(__name__)
 
 # Import Classification and Regression model file
 
-model_C = pd.read_pickle(r'saved_dt_model1.pkl')
+#model_C = pd.read_pickle(r'saved_dt_model1.pkl')
+C_pickle = open("saved_dt_model.pkl",'rb')
+model_C = pickle.load(C_pickle)
 
 # with open pickle.load('saved_dt_model.pkl', 'rb') as model_C:
 #     model_C = pickle.load(C_pickle)
@@ -61,6 +63,5 @@ def predictC():
 
 
 # Run APP in Debug mode
-
 if __name__ == "__main__":
     app.run(debug=True, port= 5000)
